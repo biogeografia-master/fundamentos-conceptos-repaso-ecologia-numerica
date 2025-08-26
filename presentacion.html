@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Biogeografía</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="José Martinez, el tali" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Biogeografía
+]
+.subtitle[
+## Unidad 1. Fundamentos, contexto de la biogeografía y repaso de ecología numérica
+]
+.author[
+### José Martinez, el tali
+]
+.institute[
+### Universidad Autónoma de Santo Domingo (UASD)
+]
+.date[
+### Actualizado: 2025-08-26
+]
+
+---
+
+
+
+
+
+
+&lt;style type="text/css"&gt;
+.title-slide {
+  background-image: url('img/fondo.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.title-slide .remark-slide-content {
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+}
+
+.large { font-size: 130% }
+.medium { font-size: 110% }
+.small { font-size: 90% }
+.tiny { font-size: 70% }
+
+.green { color: #2E8B57; }
+.blue { color: #4169E1; }
+.red { color: #DC143C; }
+.yellow { color: #FFD700; }
+
+.highlight {
+  background-color: #ffff99;
+  padding: 2px 4px;
+}
+
+.box {
+  background-color: #f0f8ff;
+  border: 2px solid #4169E1;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px 0;
+}
+
+.box-small-margin {
+  background-color: #f0f8ff;
+  border: 2px solid #4169E1;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 3px 0;
+}
+
+
+.equation {
+  background-color: #f5f5f5;
+  border-left: 5px solid #2E8B57;
+  padding: 15px;
+  margin: 10px 0;
+  font-family: 'Courier New', monospace;
+}
+&lt;/style&gt;
+
+
+# 🧭 Definiciones y alcance
+
+.box[
+**Biogeografía** = ciencia que **documenta y explica** los **patrones espaciales y temporales** de la biodiversidad (genes → especies → comunidades → ecosistemas) a lo largo de **gradientes geográficos y temporales** (área, aislamiento, latitud, elevación, profundidad, tiempo).
+]
+
+**Pregunta guía:** _¿Cómo y por qué varía la biodiversidad en la superficie terrestre?_
+
+.pull-left[
+### 🛡️ Conservación
+- Diseño de áreas protegidas  
+- Hotspots de biodiversidad  
+- Evaluación de amenaza
+]
+
+.pull-right[
+### 🌡️ Cambio climático
+- Redistribución de especies  
+- Refugios climáticos  
+- Escenarios futuros
+]
+
+.footer[**Otros usos:** servicios ecosistémicos, invasoras, restauración.]
+
+---
+
+# ❓ Preguntas centrales
+
+**Patrones espaciales**
+- ¿Por qué regiones climáticamente similares tienen biotas distintas?
+- ¿Cómo varían los rangos geográficos entre taxa y regiones?
+- ¿Por qué hay más especies en islas grandes que en islas pequeñas?
+
+**Patrones temporales, procesos históricos**
+- Tectónica de placas, glaciaciones, barreras/puentes históricos.
+- Evolución de linajes en espacio y tiempo.
+
+**Diversidad y comunidades**
+- Gradientes globales de diversidad.
+- ¿Qué determina la composición de especies en comunidades aisladas?
+
+---
+
+# 🔗 Temas interdisciplinarios
+
+.pull-left[
+### Biogeografía ↔ **Ecología**
+- Nichos y límites de distribución ("ámbito") … condiciones ambientales limitan dónde vive cada especie
+- Interacciones bióticas … competencia, depredación y mutualismos moldean rangos
+- Estructura de comunidades … la composición local refleja filtros ecológicos
+]
+
+.pull-right[
+### Biogeografía ↔ **Evolución**
+- Especiación geográfica … aislamiento espacial genera nuevas especies
+- Radiaciones adaptativas … una especie se diversifica al ocupar nichos distintos
+- Filogeografía … el ADN revela rutas históricas de dispersión y refugios
+]
+
+.center[
+### Biogeografía ↔ **Geología** · **Ciencias sociales**  
+Tectónica, paleoclima, extinciones ⟷ biogeografía humana, impactos antrópicos y política de conservación
+]
+
+---
+
+# 🧠 Epistemología (actualismo) e historia
+
+**Historia temprana y exploración**
+- Aristóteles: el mar y los ríos cambian → naturaleza dinámica.  
+- 1700–1800: &lt;1% de especies conocidas → nuevas biotas desafían taxonomías (p. ej., ornitorrinco, 1799).
+
+**Hutton (1795), Lyell (1830). Actualismo (uniformitarianismo):** los procesos físicos y biológicos actuales operaron a lo largo del tiempo geológico → base para interpretar patrones presentes.
+
+
+**Método científico en biogeografía**
+
+1. Formular preguntas ⟷ observar patrones
+2. Hipótesis
+3. Experimentos naturales/manipulativos
+4. Teorías
+
+
+---
+
+# 👤 Pioneros
+
+.pull-left[
+### **Carolus Linnaeus** (1707–1778)
+- Nomenclatura binomial  
+- “Montaña paradisíaca”: origen único; especies inmutables
+]
+
+.pull-right[
+### **Buffon** (1707–1788)
+- *Ley de Buffon*: regiones similares ≠ biotas iguales  
+- Propone cambio de especies (proto-evolución) y orígenes múltiples
+]
+
+.box[
+### **Humboldt** (1769–1859) – *Fitogeografía*
+- Isotermas/isobaras; **zonación altitudinal ≡ latitudinal**  
+- Visión holística · primera visualización científica moderna · inspira a Darwin y Wallace
+]
+
+---
+
+# 🇬🇧 Británicos influyentes
+
+.pull-left[
+### **Charles Darwin** (1809–1882)
+- Viaje del *Beagle* (1831–1836)  
+- Selección natural  
+- Énfasis en **dispersión** a larga distancia
+]
+
+.pull-right[
+### **Alfred R. Wallace** (1823–1913)
+- *Padre de la zoogeografía* · Archipiélago Malayo  
+- Co-descubridor de la selección natural  
+- **Línea de Wallace**: frontera biogeográfica
+]
+
+**Principios de Wallace (1876)**  
+- Metodológicos: distribuciones detalladas, clasificación natural, evolución.  
+- Ecológicos: dispersión posible pero limitada; competencia y depredación.  
+- Históricos: fósiles evidencian migraciones; disyunciones sugieren antigüedad.
+
+
+---
+
+class: center, middle, inverse
+
+# 🧭 La línea de Wallace
+### Una frontera biogeográfica en el Sudeste Asiático
+
+---
+
+# 🌍 ¿Qué es?
+
+.box[
+**Definición breve:** Frontera biogeográfica que separa faunas de origen **asiático** (oeste) y **australiano** (este) en el archipiélago malayo.
+]
+
+.pull-left[
+**Oeste (Sunda):**  
+Borneo, Sumatra, Java, **Bali** → mamíferos placentarios típicos de Asia (felinos, rinocerontes), primates, faisanes.
+]
+
+.pull-right[
+**Este (Sahul):**  
+**Lombok**, Sulawesi, Molucas, Nueva Guinea, Australia → **marsupiales**, monotremas, casuarios, cacatúas.
+]
+
+.footer[Wallace (1854–1862) observó un cambio brusco de biotas pese a distancias cortas entre islas.]
+
+---
+
+# 🗺️ ¿Dónde está?
+
+.pull-left[
+- Entre **Bali** (oeste) y **Lombok** (este).  
+- Entre **Borneo** y **Sulawesi**.  
+- Entre Filipinas y las **Molucas**.  
+- La zona de transición se conoce como **Wallacea**.
+]
+
+---
+
+.center[
+&lt;img src="img/linea-wallace.jpg" width="80%"&gt;
+.small[
+Mapa esquemático de la línea de Wallace atravesando Bali–Lombok y Borneo–Sulawesi, destacando Wallacea. Nota también las líneas de **Weber** (más hacia el este) y **Lydekker** (borde occidental de Sahul).
+]
+]
+
+---
+
+# ⚙️ ¿Por qué existe?
+
+.box[
+Durante los **máximos glaciares**, el nivel del mar bajó y unió muchas islas a los continentes:
+**Sunda** (Asia) y **Sahul** (Australia–Nueva Guinea).
+]
+
+.pull-left[
+- Aun con el mar bajo, el **estrecho de Lombok** y el **estrecho de Makassar** mantuvieron **aguas profundas**.  
+- Esas **barreras oceánicas** impidieron el paso de muchas especies terrestres.
+]
+
+.pull-right[
+- Resultado: fuerte **discontinuidad faunística** en distancias cortas.  
+- Dispersión posible pero **limitada** → mezclas parciales (aves voladoras, algunos taxones marinos) y muchos límites para mamíferos terrestres.
+]
+
+---
+
+# 🧑‍🔬 Wallace y las otras líneas
+
+.pull-left[
+### Alfred R. Wallace (1823–1913)  
+- Viajes por el **archipiélago malayo**.  
+- Coautor de la **selección natural**.  
+- *Zoogeografía*.
+]
+
+.pull-right[
+### Otras fronteras relacionadas
+- **Línea de Weber**: máximo gradiente de recambio de especies, algo **al este** de la de Wallace.  
+- **Línea de Lydekker**: borde **occidental** de la plataforma **Sahul** (más oriental).
+]
+
+.footer[Hoy se entiende como un **sistema de fronteras**; la línea de Wallace es la más célebre y pedagógica.]
+
+---
+
+# 🧩 Importancia biogeográfica
+
+- Demuestra que **pequeñas distancias** pueden ocultar **grandes barreras** históricas.  
+- Integra **geología** (tectónica, plataformas continentales), **paleoclima** (niveles del mar) y **evolución** (dispersión, especiación).  
+- Caso de estudio central en **biogeografía histórica**, **conservación** (regiones biogeográficas) y **macroevolución**.
+
+.box[
+**Idea clave:** Los **límites históricos** y la **profundidad oceánica** pueden estructurar la biodiversidad tanto como el clima actual.
+]
+
+---
+
+# ✅ Para recordar
+
+- La línea de Wallace marca el **quiebre Asia ↔ Australasia**.  
+- La **barrera** fue persistente (mares profundos) incluso en glaciaciones.  
+- Forma parte de un **conjunto** de líneas (Weber, Lydekker) que delimitan **Wallacea** y **Sahul**.
+
+---
+
+# 🔄 Recambio y diversidad beta. ¿Cómo hacerlo hoy?
+
+.box-small-margin[
+.small[
+**Línea de Weber** → marca el **máximo gradiente de recambio** de especies en el archipiélago malayo.
+]
+]
+
+.pull-left[
+📊 **Diversidad beta**
+
+.small[
+Mide **cuánto cambian las comunidades** entre sitios.
+
+- **Índice de Jaccard**:  No es el mejor índice, pero es fácil de entender.
+$$
+J = \frac{a}{a+b+c}
+$$
+
+- \(a\): especies **compartidas**  
+- \(b\): especies únicas del sitio 1  
+- \(c\): especies únicas del sitio 2
+]
+]
+
+.pull-right[
+**Interpretación**  
+- \(J = 1\) → biotas idénticas  
+- \(J = 0\) → ninguna especie compartida  
+- Valores intermedios → proporción de compartidas vs. únicas
+
+💡 Weber observó que a lo largo de Wallacea, **a ↓** y **b+c ↑** → recambio máximo.
+]
+
+.footer[Recambio = diversidad beta → formaliza lo que Weber describió empíricamente.]
+
+---
+
+
+
+
+# 🔢 Ejemplo práctico: índice de Jaccard en R
+
+.box-small-margin[
+.small[
+**Pregunta:** ¿Qué tan diferentes son dos islas en su composición de especies?
+]
+]
+
+.pull-left[
+.small[
+🏝 **Isla A**
+Especies: `["Tigre", "Elefante", "Mono", "Cacatúa"]`
+
+🏝 **Isla B**
+Especies: `["Canguro", "Equidna", "Cacatúa", "Mono"]`
+
+- Compartidas (`a`) = {Mono, Cacatúa} → 2  
+- Únicas Isla A (`b`) = {Tigre, Elefante} → 2  
+- Únicas Isla B (`c`) = {Canguro, Equidna} → 2  
+
+$$
+J = \tfrac{a}{a+b+c} = \tfrac{2}{2+2+2} = 0.33
+$$
+]
+]
+
+.pull-right[
+.small[
+
+
+``` r
+islaA &lt;- c("Tigre","Elefante","Mono","Cacatúa")
+islaB &lt;- c("Canguro","Equidna","Cacatúa","Mono")
+
+# Calcular Jaccard
+a &lt;- length(intersect(islaA, islaB))
+b &lt;- length(setdiff(islaA, islaB))
+c &lt;- length(setdiff(islaB, islaA))
+
+Jaccard &lt;- a / (a + b + c)
+Jaccard
+```
+
+```
+## [1] 0.3333333
+```
+
+Resultado: J = 0.33 → 33 % de especies compartidas
+]
+]
+
+.footer[Ejemplo simple del recambio que Weber intuía en Wallacea.]
+
+---
+
+# 🧩 Síntesis moderna y contemporánea
+
+.small[
+
+**1900–1950**
+- Paleontología (historia de vertebrados)  
+- Genética de poblaciones (variación geográfica)  
+- Síntesis evolutiva y concepto biológico de especie
+
+**1950–2000**
+- **Tectónica de placas**  
+- **Filogenia** (métodos cladísticos)  
+- **Computación** (análisis cuantitativos)
+
+**Teoría de Equilibrio en Biogeografía Insular** (MacArthur &amp; Wilson, 1967)
+- Cambió paradigma hacia procesos dinámicos
+- *Diversidad = balance entre inmigración y extinción* → base para la biología de la conservación.
+
+**Hoy**:
+- Tecnologías geoespaciales
+- Biogeografía molecular: ADN y filogeografía
+- Ecología de paisajes - Procesos a múltiples escalas
+- Biogeografía del cambio global - Impactos humanos
+
+]
+---
+
+# 📚 Fuentes de información (revistas y textos)
+
+.pull-left[
+**Revistas clave**  
+- *Journal of Biogeography*, *Global Ecology and Biogeography*, *Ecography*, *Diversity and Distributions*  
+- Conexas: *Nature*, *Science*, *Ecology*, *Evolution*, *Systematic Biology*, *Conservation Biology*, *Peer Community Journal*
+]
+
+.pull-right[
+**Textos**  
+- Lomolino et al. (2022) *Biogeography* (6ª)
+- Cox &amp; Moore (2016) *Ecological &amp; Evolutionary Approach*  
+- Brown &amp; Lomolino (1998) *Biogeography*
+- Legendre &amp; Legendre (2012) *Numerical Ecology*
+- Borcard et al. (2018) *Numerical Ecology with R*
+- Zuur et al. (2007) *Analysing Ecological Data*
+]
+
+**Datos**: GBIF, IUCN, WorldClim, CHELSA Climate, NASA Earth Observations; repositorios nacionales (SiB Colombia, CONABIO, ALA).
+
+---
+
+# 🔢 Introducción a la ecología numérica
+
+&gt; "La ecología numérica se ha vuelto ubicua. Ecólogos y ecólogas son conscientes del tremendo interés de explotar datos adquiridos con esfuerzo de la manera más eficiente posible"
+
+**Objetivos**: extraer información, identificar patrones, probar hipótesis, predecir con reproducibilidad.
+
+**AED** (análisis exploratorio): visión general, transformación/recodificación, orientar análisis avanzados.
+
+**Matrices típicas**
+- **Especies** (n × p): abundancias o presencia/ausencia, muchos ceros  
+- **Ambiental** (n × q): variables físicas/químicas/categóricas  
+- **Espacial** (n × 2): coordenadas (X, Y/long, lat)
+
+---
+
+class: center, middle, inverse
+
+# ✨ Y todo comenzó ... .yellow[**con la distancia**] 
+
+---
+
+&lt;img src="img/eda-01.gif"&gt;
+.small[Fuente: https://jumpingrivers.github.io/datasauRus/]
+
+---
+
+class: center, middle, inverse
+
+.pull-left[
+&lt;img src="img/eda-02.jpg"&gt;
+]
+
+
+.pull-right[
+&lt;img src="img/eda-03.jpg"&gt;
+]
+
+.small[Fuente: https://www.geckoboard.com/blog/anscombes-quartet-why-summary-metrics-lie/]
+
+---
+
+class: center, middle
+
+&lt;img src="img/eda-04.jpg"&gt;
+.small[Borcard et al. (2018)]
+
+---
+
+class: center, middle
+
+&lt;img src="img/eda-05.jpg"&gt;
+.small[Borcard et al. (2018)]
+
+---
+
+# 🧪 Herramientas básicas en R
+
+.small[
+
+]
+
+**Transformaciones (especies)**: presencia/ausencia, `log(x + 1)`, `sqrt(x)`, **Hellinger**: `sqrt(x / rowSums(x))`
+
+---
+
+# 🧮 Medidas de asociación
+
+**Modo Q** (sitios ↔ sitios): similitud/diferencia entre **objetos**  
+**Modo R** (variables ↔ variables): dependencia entre **descriptores**
+
+**Dobles ceros**: ausencias compartidas ≠ similitud → usar coeficientes **asimétricos**
+
+.small[
+**Coeficientes**  
+- **Jaccard**: \( a / (a + b + c) \)  
+- **Sørensen**: \( 2a / (2a + b + c) \)  
+- **Bray–Curtis**: \( \sum |x_{1i}-x_{2i}| / \sum (x_{1i}+x_{2i}) \)
+]
+
+**Paradoja de Orlóci**: distintas transformaciones/medidas ↔ conclusiones opuestas → **justificar**, **probar** alternativas, **validar** con datos independientes.
+
+---
+
+class: center, middle
+
+.center[
+&lt;img src="img/asociacion-01.jpg"&gt;
+.small[Borcard et al. (2018)]
+]
+
+---
+
+# 🧱 Análisis de agrupamiento
+
+**Objetivo**: reconocer subconjuntos **discontinuos** en ambientes aparentemente continuos.
+
+.pull-left[
+**Jerárquicos (aglomerativos)**  
+- Single/complete linkage  
+- UPGMA (promedios)  
+- **Ward** (mínima varianza)
+]
+
+.pull-right[
+**No jerárquicos**  
+- **k-means** (minimiza varianza intra-grupo; requiere k)  
+- **PAM** (medoides; acepta cualquier distancia; robusto a outliers)
+]
+
+**Interpretación**: dendrogramas (altura/cortes), **silhouette**, **correlación cofenética**.  
+**Especies indicadoras (IndVal)**: _especificidad × fidelidad_; prueba por permutaciones.
+
+---
+
+class: center, middle
+
+.center[
+&lt;img src="img/agrupamiento-01.jpg" width="95%"&gt;
+.small[&lt;br&gt;Borcard et al. (2018)]
+]
+
+---
+
+class: center, middle
+
+.center[
+&lt;img src="img/agrupamiento-02.jpg"&gt;
+.small[Borcard et al. (2018)]
+]
+
+
+---
+
+
+# 🧭 Ordenación (no restringida)
+
+.pull-left[
+**PCA**: datos cuantitativos, relaciones lineales; preserva distancias euclidianas.  
+**CA**: abundancias/especies, preserva distancia `\(\chi^2\)`.
+]
+
+.pull-right[
+**PCoA**: cualquier (dis)similitud; descomposición espectral.  
+**NMDS**: preserva **rangos**; robusto; minimiza **estrés** por optimización.
+]
+
+**Interpretación**: *biplots*, vectores de variables, proximidad ≈ similitud, eigenvalues y % varianza, pruebas de permutación.
+
+---
+
+class: center, middle
+
+.center[
+&lt;img src="img/ordenacion-no-restringida-01.jpg" width="90%"&gt;
+.small[&lt;br&gt;Borcard et al. (2018)]
+]
+
+---
+
+class: center, middle
+
+.center[
+&lt;img src="img/ordenacion-no-restringida-02.jpg"&gt;
+.small[Borcard et al. (2018)]
+]
+
+---
+
+class: center, middle
+
+.center[
+&lt;img src="img/ordenacion-no-restringida-03.jpg"&gt;
+.small[Borcard et al. (2018)]
+]
+
+---
+
+class: center, middle
+
+.center[
+&lt;img src="img/ordenacion-no-restringida-04.jpg"&gt;
+.small[Borcard et al. (2018)]
+]
+
+---
+
+class: center, middle
+
+.center[
+&lt;img src="img/ordenacion-no-restringida-05.jpg" width="80%"&gt;
+.small[&lt;br&gt;Borcard et al. (2018)]
+]
+
+---
+
+class: center, middle
+
+.center[
+&lt;img src="img/ordenacion-no-restringida-06.jpg" width="85%"&gt;
+.small[&lt;br&gt;Borcard et al. (2018)]
+]
+
+---
+
+
+# 🎯 Ordenación canónica (restringida)
+
+**RDA** = PCA + regresión múltiple → variación en especies explicada por ambiente.  
+**CCA** = CA + regresión → composición de especies explicada por ambiente (respuesta **unimodal**).
+
+**Partición de varianza**: ambiente + espacio + interacción + residuo.
+
+---
+
+class: center, middle
+
+.center[
+&lt;img src="img/ordenacion-restringida-01.jpg" width="50%"&gt;
+.small[&lt;br&gt;Borcard et al. (2018)]
+]
+
+---
+
+class: center, middle
+
+.center[
+&lt;img src="img/ordenacion-restringida-02.jpg" width="50%"&gt;
+.small[&lt;br&gt;Borcard et al. (2018)]
+]
+
+---
+
+# 🌈 Diversidad: α, β, γ
+
+**α (local)**: S, Shannon `\(H'\)`, Simpson `\(D\)`, equitatividad.  
+**β (recambio)**: turnover vs. anidamiento; índices de **Whittaker**, **Jaccard**, **Sørensen**.  
+**γ (paisaje)**: `\(\gamma = \alpha \times \beta\)` (partición multiplicativa).
+
+**Baselga (2010)**: `\(\beta_{total} = \beta_{reemplazo} + \beta_{riqueza}\)`
+Aplicaciones: priorización complementaria, procesos de estructuración, coexistencia.
+
+---
+
+class: center, middle
+
+.center[
+&lt;img src="img/diversidad-01.jpg" width="100%"&gt;
+.small[&lt;br&gt;Fuente: https://github.com/biogeografia-master/scripts-de-analisis-BCI/blob/master/di_1_analisis_de_diversidad_diversidad_alpha.md]
+]
+
+---
+
+class: center, middle
+
+.center[
+&lt;img src="img/diversidad-02.jpg" width="100%"&gt;
+.small[&lt;br&gt;Fuente: https://github.com/biogeografia-master/scripts-de-analisis-BCI/blob/master/di_1_analisis_de_diversidad_diversidad_alpha.md]
+]
+
+---
+
+class: center, middle
+
+.center[
+&lt;img src="img/diversidad-03.jpg" width="100%"&gt;
+.small[&lt;br&gt;Fuente: https://github.com/biogeografia-master/scripts-de-analisis-BCI/blob/master/di_1_analisis_de_diversidad_diversidad_alpha.md]
+]
+
+---
+
+class: center, middle
+
+.center[
+&lt;img src="img/diversidad-04.jpg" width="100%"&gt;
+.small[&lt;br&gt;Fuente: https://github.com/biogeografia-master/scripts-de-analisis-BCI/blob/master/di_1_analisis_de_diversidad_diversidad_alpha.md]
+]
+
+---
+
+class: center, middle
+
+.center[
+&lt;img src="img/diversidad-05.jpg" width="100%"&gt;
+.small[&lt;br&gt;Fuente: https://github.com/biogeografia-master/scripts-de-analisis-BCI/blob/master/di_1_analisis_de_diversidad_diversidad_alpha.md]
+]
+
+---
+
+class: center, middle
+
+.center[
+&lt;img src="img/diversidad-06.jpg" width="100%"&gt;
+.small[&lt;br&gt;Fuente: https://github.com/biogeografia-master/scripts-de-analisis-BCI/blob/master/di_1_analisis_de_diversidad_diversidad_alpha.md]
+]
+
+
+---
+
+class: center, middle
+
+.center[
+&lt;img src="img/diversidad-07.jpg" width="100%"&gt;
+.small[&lt;br&gt;Fuente: https://github.com/biogeografia-master/scripts-de-analisis-BCI/blob/master/di_1_analisis_de_diversidad_diversidad_alpha.md]
+]
+
+---
+
+# 🗺️ Ecología espacial y SDM
+
+**Primera ley de Tobler**: “todo está relacionado con todo, pero lo cercano más que lo lejano”.  
+**Autocorrelación espacial**: Moran’s I, Geary’s C, correlogramas → escalas de estructura.
+
+**Causas**: gradientes ambientales, dispersión, interacciones locales, legados históricos; heterogeneidad (parches, barreras).
+
+**Herramientas**: polinomios, MEM/PCNM (eigenvectores), **kriging**.
+
+**Modelos de distribución de especies (SDM)**  
+- **Correlativos**: GLM, MaxEnt, Random Forest (variables climáticas/topográficas/uso de suelo)  
+- **Mecanicistas**: procesos fisiológicos y dispersión
+
+---
+
+# 🔧 Herramientas y reproducibilidad
+
+**R paquetes**: `vegan`, `cluster`, `ade4`, `adespatial`, `betapart`, `indicspecies`.  
+**Reproducibilidad**: scripts documentados, Git, informes dinámicos (R Markdown).
+
+.small[
+```r
+# Hellinger en R
+comm_hell &lt;- decostand(comm, method = "hellinger")
+
+# Distancia Bray-Curtis y NMDS
+d &lt;- vegdist(comm_hell, method = "bray")
+ord &lt;- metaMDS(d, k = 2, trymax = 100)
+
+# Clustering Ward
+hc &lt;- hclust(d, method = "ward.D2")
+plot(hc)
+```
+]
+
+---
+
+# ✅ Síntesis y próximos pasos
+
+**Flujo típico si queremos responder múltipes preguntas**: AED → asociación → agrupamiento → ordenación → diversidad → espacial/SDM → **integración**.  
+**Complementariedad**: agrupamiento (discontinuidades) vs. ordenación (gradientes).  
+**Siguiente**: formular preguntas biogeográficas, aplicar técnicas en R, interpretar patrones y comunicar resultados.
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
