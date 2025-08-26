@@ -460,7 +460,7 @@ Resultado: J = 0.33 → 33 % de especies compartidas
 - Zuur et al. (2007) *Analysing Ecological Data*
 ]
 
-**Datos**: GBIF, IUCN, WorldClim, CHELSA Climate, NASA Earth Observations; repositorios nacionales (SiB Colombia, CONABIO, ALA).
+**Datos**: GBIF, Google Earth Engine (GEE), IUCN, WorldClim, CHELSA Climate, NASA Earth Observations; repositorios nacionales (SiB Colombia, CONABIO, ALA).
 
 ---
 
