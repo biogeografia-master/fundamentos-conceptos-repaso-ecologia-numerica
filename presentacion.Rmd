@@ -556,6 +556,8 @@ aggregate(valor ~ grupo, data = df, FUN = sum)
 
 **Paradoja de Orlóci**: distintas transformaciones/medidas ↔ conclusiones opuestas → **justificar**, **probar** alternativas, **validar** con datos independientes.
 
+Ver aquí: https://github.com/biogeografia-master/scripts-de-analisis-BCI/blob/master/medicion_asociacion_1_modo_Q_paradoja_orloci.md
+
 ---
 
 class: center, middle
